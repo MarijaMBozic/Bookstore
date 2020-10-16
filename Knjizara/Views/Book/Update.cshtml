@@ -1,0 +1,51 @@
+﻿@using Knjizara.Models
+@using Knjizara.ViewModels
+@model ZanrKnjigaViewModels
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
+}
+<div class="navigacioniMeni">
+    <a href="/Book/Create">Home</a>
+    <a href="/Book/Index">All books</a>
+    <a href="/Book/DeletedBook">Deleted books</a>
+    <a href="/Genre/Create">Add genre</a>
+    <a href="/Genre/Index">All genre</a>
+    <a href="/Genre/DeleteGenre">Deleted genre</a>
+    <a href="/Book/Search">Search by genre</a>
+</div>
+<div class="unosForma">
+    <h1><i>Update book</i></h1>
+    @using (Html.BeginForm("Update", "Book", FormMethod.Post, new { id="f1", onsubmit="return ValidateForm()"}))
+    {
+        @Html.HiddenFor(m => m.Book.Id)
+        <table align="center">
+            <tr>
+                <th>Name of book</th>
+                <td>                    
+                    @Html.EditorFor(m => m.Book.Name)
+                    @Html.ValidationMessageFor(m => m.Book.Name)
+                    <span class="validationerror" id="nameSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <th>Price of book</th>
+                <td>                   
+                    @Html.EditorFor(m => m.Book.Price)
+                    @Html.ValidationMessageFor(m => m.Book.Price)
+                    <span class="validationerror" id="priceSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <th>Genre of book</th>
+                <td>
+                    @Html.DropDownListFor(m => m.SelectedGenreId, new SelectList(Model.Zanrovi, "Id", "Name"))
+                 </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="Add" /></td>
+            </tr>
+        </table>
+    }
+</div>
+<script src="~/Scripts/Validacija.js"></script>

@@ -1,0 +1,34 @@
+﻿
+.listaKnjiga {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    margin-right:10px;
+}
+
+    .listaKnjiga td, .listaKnjiga th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        width: auto;
+    }
+
+    .listaKnjiga tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .listaKnjiga tr:nth-child(odd) {
+        background-color: #ddd;
+    }
+
+    .listaKnjiga tr:hover {
+        background-color: #beb6b6;
+    }
+
+    .listaKnjiga th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #5160ae;
+        color: white;
+    }

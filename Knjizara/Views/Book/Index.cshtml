@@ -1,0 +1,61 @@
+﻿@using Knjizara.Models
+@model IEnumerable<Book>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
+}
+
+    <div class="navigacioniMeni">
+        <a href="/Book/Create">Home</a>
+        <a href="/Book/Index">All books</a>
+        <a href="/Book/DeletedBook">Deleted books</a>
+        <a href="/Genre/Create">Add genre</a>
+        <a href="/Genre/Index">All genre</a>
+        <a href="/Genre/DeleteGenre">Deleted genre</a>
+        <a href="/Book/Search">Search by genre</a>
+    </div>
+<div>
+    <form action="/Book/Sort" class="sort">
+        <p>Sort by: </p>
+        <select id="opcija" name="opcija">
+            <option value="Name">Book name</option>
+            <option value="Price">Book price</option>
+        </select>
+        <select id="smer" name="smer">
+            <option value="1">Ascending</option>
+            <option value="-1">Dscending</option>
+        </select>
+
+        <button type="submit">Sort</button>
+    </form>
+</div>
+<div class=" unosForma">
+    <h1><i>List all books</i></h1>
+    <div class="listaKnjiga">
+        <table border="1" align="center">
+            <tr>
+                <th>Name of book</th>
+                <th>Price of book</th>
+                <th>Genre of book</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            @foreach (Book bo in Model)
+            {
+                if (bo.Deleted == false)
+                {
+                    <tr>
+                        <td>@bo.Name</td>
+                        <td>@bo.Price</td>
+                        <td>@bo.Genre.Name</td>
+                        <td><a href="/Book/Delete?Id=@bo.Id">Delete</a></td>
+                        <td><a href="/Book/Update?Id=@bo.Id">Update</a></td>
+                        <td><a href="/Book/Details?Id=@bo.Id">Details</a></td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+

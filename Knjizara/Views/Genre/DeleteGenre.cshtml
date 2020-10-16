@@ -1,0 +1,38 @@
+﻿@using Knjizara.Models
+@model IEnumerable<Genre>
+@{
+    ViewBag.Title = "DeleteGenre";
+    Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
+}
+
+<div class="navigacioniMeni">
+    <a href="/Book/Create">Home</a>
+    <a href="/Book/Index">All books</a>
+    <a href="/Book/DeletedBook">Deleted books</a>
+    <a href="/Genre/Create">Add genre</a>
+    <a href="/Genre/Index">All genre</a>
+    <a href="/Genre/DeleteGenre">Deleted genre</a>
+    <a href="/Book/Search">Search by genre</a>
+</div>
+
+<div class="unosForma">
+    <h1><i>List all deleted genre</i></h1>
+    <div class="listaKnjiga">
+        <table border="1" align="center">
+            <tr>
+                <th>Name of genre</th>
+                <th>&nbsp;</th>
+            </tr>
+            @foreach (Genre g in Model)
+            {
+                if (g.Deleted == true)
+                {
+                    <tr>
+                        <td>@g.Name</td>
+                        <td><a href="/Genre/Details?id=@g.Id">Details</a></td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

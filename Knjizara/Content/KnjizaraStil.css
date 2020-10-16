@@ -1,0 +1,26 @@
+﻿body {
+    background-image: url(img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+h1 {
+    color: #beb6b6;
+    text-align: center;
+    border-bottom: 2px solid #beb6b6;
+}
+
+.field-validation-error {
+    color: #c12222;
+}
+
+.validationerror{
+    color:#df1fd7;
+}
+
+
+
+
+
+

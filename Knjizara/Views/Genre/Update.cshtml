@@ -1,0 +1,37 @@
+﻿@model Knjizara.Models.Genre
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
+}
+
+<div class="navigacioniMeni">
+    <a href="/Book/Create">Home</a>
+    <a href="/Book/Index">All books</a>
+    <a href="/Book/DeletedBook">Deleted books</a>
+    <a href="/Genre/Create">Add genre</a>
+    <a href="/Genre/Index">All genre</a>
+    <a href="/Genre/DeleteGenre">Deleted genre</a>
+    <a href="/Book/Search">Search by genre</a>
+</div>
+
+<div class="unosForma">
+    <h1><i>Update genre @Model.Name</i></h1>
+    @using (Html.BeginForm("Update", "Genre", FormMethod.Post, new { id = "f1", onsubmit = "return ValidateForm()"}))
+    {
+        @Html.HiddenFor(m => m.Id)
+        <table align="center">
+            <tr>
+                <th>Name of genre</th>
+                <td>
+                    @Html.EditorFor(m=>m.Name)
+                    @Html.ValidationMessageFor(m => m.Name)
+                    <span class="validationerror" id="nameSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="Update" /></td>
+            </tr>
+        </table>
+    }
+</div>
+<script src="~/Scripts/ValidacijaGenre.js"></script>

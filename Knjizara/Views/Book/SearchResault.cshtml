@@ -1,0 +1,46 @@
+﻿@using Knjizara.Models
+@model IEnumerable<Book>
+@{
+    ViewBag.Title = "SearchResault";
+    Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
+}
+<div class="navigacioniMeni">
+    <a href="/Book/Create">Home</a>
+    <a href="/Book/Index">All books</a>
+    <a href="/Book/DeletedBook">Deleted books</a>
+    <a href="/Genre/Create">Add genre</a>
+    <a href="/Genre/Index">All genre</a>
+    <a href="/Genre/DeleteGenre">Deleted genre</a>
+    <a href="/Book/Search">Search by genre</a>
+</div>
+
+<div class=" unosForma">
+    <h1><i>List all books by genre</i></h1>
+    <div class="listaKnjiga">
+        <table border="1" align="center">
+            <tr>
+                <th>Name of book</th>
+                <th>Price of book</th>
+                <th>Genre of book</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                if (item.Deleted == false)
+                {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.Genre.Name</td>
+                    <td><a href="/Knjizara/DeleteBook?Id=@item.Id">Delete</a></td>
+                    <td><a href="/Knjizara/IzmeniBook?Id=@item.Id">Update</a></td>
+                </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+
+
+

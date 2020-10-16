@@ -1,0 +1,12 @@
+﻿.greska {
+    background-color: #cc3333;
+    border: 1px solid #666699;
+    color: whitesmoke;
+    font-size: 16px;
+    width: 500px;
+    height: 200px;
+    margin-left: 400px;
+    margin-top: 100px;
+    text-align:center;
+    padding-top:50px;
+}

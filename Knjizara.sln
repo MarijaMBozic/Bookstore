@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knjizara", "Knjizara\Knjizara.csproj", "{12C6EDEA-C1B1-479C-B21B-42A576D40DBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnjizaraTest", "KnjizaraTest\KnjizaraTest.csproj", "{906B85CC-B10C-4775-B08E-A9BFEC772ED4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12C6EDEA-C1B1-479C-B21B-42A576D40DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C6EDEA-C1B1-479C-B21B-42A576D40DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C6EDEA-C1B1-479C-B21B-42A576D40DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C6EDEA-C1B1-479C-B21B-42A576D40DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906B85CC-B10C-4775-B08E-A9BFEC772ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906B85CC-B10C-4775-B08E-A9BFEC772ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906B85CC-B10C-4775-B08E-A9BFEC772ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906B85CC-B10C-4775-B08E-A9BFEC772ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {517DEC59-22D0-4EE3-8B4A-C74E64675ECA}
+	EndGlobalSection
+EndGlobal

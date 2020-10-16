@@ -1,0 +1,74 @@
+﻿.unosForma {
+    width: 30%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 13%;
+    padding: 50px;
+    background-color: #EEE;
+    color: #333;
+    border: 2px solid #C2D6FF;
+    border-radius: 40px 0 40px 0;
+    text-align: left;
+}
+
+    .unosForma th {
+        font-size: 15px;
+        width: 40%;
+        height: 30px;
+        text-align: left;
+    }
+
+    .unosForma input[type=text] {
+        background-repeat: no-repeat;
+        background-position: 6px;
+        border: 1px solid #DADADA;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        width: 100%;
+        height: 30px;
+        text-align: left;
+        font-size: 14px;
+        box-shadow: 0 0 10px;
+        -webkit-box-shadow: 0 0 10px;
+        -moz-box-shadow: 0 0 10px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px
+    }
+
+    .unosForma select {
+        background-repeat: no-repeat;
+        background-position: 6px;
+        border: 1px solid #DADADA;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 35px;
+        width: 105%;
+        height: 30px;
+        font-size: 14px;
+        box-shadow: 0 0 10px;
+        -webkit-box-shadow: 0 0 10px;
+        -moz-box-shadow: 0 0 10px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px
+    }
+
+    .unosForma input[type=submit] {
+        background-color: #cc7a66;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 25px;
+        color: #FFF;
+        text-shadow: 1px 1px 1px #949494;
+        margin-left: 120px
+    }
+
+        .unosForma input[type=submit]:hover {
+            background-color: #FF9980
+        }
+
+.field-validation-error{
+    color:#c12222;
+}
