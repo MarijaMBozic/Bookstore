@@ -120,7 +120,6 @@ namespace Knjizara.Repository
                 {
                     using (SqlCommand cmd = conn.CreateCommand())
                     {
-
                         cmd.CommandText = "select Books.Id, Books.BookName, Books.Price, Genres.Id, Books.Deleted from Books left join Genres on Books.GenreId = Genres.Id";
                         SqlDataAdapter adapter = new SqlDataAdapter();
                         adapter.SelectCommand = cmd;
@@ -139,7 +138,6 @@ namespace Knjizara.Repository
 
                             Book book = new Book(idBook, nameBook, priceBook, gen, deletBook);
                             listaKnjiga.Add(book);
-
                         }
                     }
                 }
@@ -162,7 +160,6 @@ namespace Knjizara.Repository
                 {
                     using (SqlCommand cmd = conn.CreateCommand())
                     {
-
                         cmd.CommandText = "select * from Books where Books.Id=@Id";
                         cmd.Parameters.AddWithValue("@Id", id);
                         SqlDataAdapter adapter = new SqlDataAdapter();

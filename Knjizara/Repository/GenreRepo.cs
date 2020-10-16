@@ -150,9 +150,7 @@ namespace Knjizara.Repository
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
-                {
-                    
-
+                {                 
                     using (SqlCommand cmd = conn.CreateCommand())
                     {
                         cmd.CommandText = "select*from Genres where id=" + id;
