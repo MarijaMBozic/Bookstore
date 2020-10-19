@@ -4,15 +4,7 @@
     ViewBag.Title = "Search";
     Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
 }
-<div class="navigacioniMeni">
-    <a href="/Book/Create">Home</a>
-    <a href="/Book/Index">All books</a>
-    <a href="/Book/DeletedBook">Deleted books</a>
-    <a href="/Genre/Create">Add genre</a>
-    <a href="/Genre/Index">All genre</a>
-    <a href="/Genre/DeleteGenre">Deleted genre</a>
-    <a href="/Book/Search">Search by genre</a>
-</div>
+
 <div>
     <form method="post" action="/Book/Search" class="unosForma">
         <p>Pretrazi  listu knjiga po zanru: </p>
@@ -20,13 +12,13 @@
         <select name="SelectedGenreId">
             @foreach (var g in Model.Zanrovi)
             {
-                if (g.Deleted==false)
+                if (g.Deleted == false)
                 {
-                      <option value="@g.Id">@g.Name</option>
+                    <option value="@g.Id">@g.Name</option>
                 }
             }
         </select>
 
-        <button type="submit">Pretrazi</button>
+        <input type="submit" name="Add" value="Search" />
     </form>
 </div>

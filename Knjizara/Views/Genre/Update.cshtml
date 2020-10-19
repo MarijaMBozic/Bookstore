@@ -4,16 +4,6 @@
     Layout = "~/Views/Shared/KnjizaraLayout.cshtml";
 }
 
-<div class="navigacioniMeni">
-    <a href="/Book/Create">Home</a>
-    <a href="/Book/Index">All books</a>
-    <a href="/Book/DeletedBook">Deleted books</a>
-    <a href="/Genre/Create">Add genre</a>
-    <a href="/Genre/Index">All genre</a>
-    <a href="/Genre/DeleteGenre">Deleted genre</a>
-    <a href="/Book/Search">Search by genre</a>
-</div>
-
 <div class="unosForma">
     <h1><i>Update genre @Model.Name</i></h1>
     @using (Html.BeginForm("Update", "Genre", FormMethod.Post, new { id = "f1", onsubmit = "return ValidateForm()"}))
